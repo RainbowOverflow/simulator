@@ -202,11 +202,11 @@ namespace {
         }
     };
 
-    /* override due to valgrind error and gtest using this operator<< */
-    ostream& operator<<(ostream& os, const SSDConf& value) {
-        (void) value;
-        return os;
-    }
+    /* override due to valgrind error and gtest using this operator<< . rben: not used?*/
+    // ostream& operator<<(ostream& os, const SSDConf& value) {
+    //     (void) value;
+    //     return os;
+    // }
 
     class BaseTest : public ::testing::TestWithParam<SSDConf*> {
         private:

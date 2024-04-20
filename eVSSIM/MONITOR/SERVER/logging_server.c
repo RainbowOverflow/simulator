@@ -235,7 +235,7 @@ int log_server_init(void) {
     return 0;
 }
 
-void log_server_update(SSDStatistics stats) {
+void log_server_update(SSDStatistics stats, void* unused) {
     if (!stats_equal(log_server.stats, stats)) {
         pthread_mutex_lock(&log_server.lock);
         log_server.stats = stats;

@@ -80,8 +80,9 @@ int log_server_init(void);
 /**
  * Update the statistics sent by the logging server
  * @param stats the new statistics to use
+ * rben: TODO: what the void pointer means?
  */
-void log_server_update(SSDStatistics stats);
+void log_server_update(SSDStatistics stats, void* unused);
 
 /**
  * Update the current reset hook of the logging server
